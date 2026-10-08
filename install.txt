@@ -1,0 +1,1 @@
+Copy the contents of the release folder (Sigf.esp, Scripts, Textures, Meshes, Sound) into Skyrim Special Edition's Data folder and enable Sigf.esp. Start a game: the village turns into Naruto clones.

@@ -1,0 +1,255 @@
+{
+ "stage": "Riverwood",
+ "records": [
+  {
+   "type": "TextureSet",
+   "id": "SigfOrangeSuitTex",
+   "set": {
+    "Diffuse": "sigf\\orange_suit.dds",
+    "NormalOrGloss": "sigf\\orange_suit_n.dds"
+   }
+  },
+  {
+   "type": "TextureSet",
+   "id": "SigfNavyClothTex",
+   "set": {
+    "Diffuse": "sigf\\navy_cloth.dds",
+    "NormalOrGloss": "sigf\\navy_cloth_n.dds"
+   }
+  },
+  {
+   "type": "ArmorAddon",
+   "from": "PrisonerClothesAA",
+   "id": "SigfOrangeSuitAA",
+   "set": {
+    "WorldModel.Male.AlternateTextures": [
+     {
+      "Name": "clothes",
+      "Index": 0,
+      "NewTexture": "@SigfOrangeSuitTex"
+     }
+    ],
+    "WorldModel.Female.AlternateTextures": [
+     {
+      "Name": "clothes",
+      "Index": 0,
+      "NewTexture": "@SigfOrangeSuitTex"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Armor",
+   "from": "ClothesPrisonerTunic",
+   "id": "SigfOrangeSuit",
+   "set": {
+    "Name": "Orange Jumpsuit",
+    "Armature": [
+     "@SigfOrangeSuitAA"
+    ],
+    "Value": 50
+   }
+  },
+  {
+   "type": "ArmorAddon",
+   "from": "PrisonerShoesAA",
+   "id": "SigfNinjaSandalsAA",
+   "set": {
+    "WorldModel.Male.AlternateTextures": [
+     {
+      "Name": "shoes",
+      "Index": 1,
+      "NewTexture": "@SigfNavyClothTex"
+     }
+    ],
+    "WorldModel.Female.AlternateTextures": [
+     {
+      "Name": "shoes",
+      "Index": 1,
+      "NewTexture": "@SigfNavyClothTex"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Armor",
+   "from": "ClothesPrisonerShoes",
+   "id": "SigfNinjaSandals",
+   "set": {
+    "Name": "Ninja Sandals",
+    "Armature": [
+     "@SigfNinjaSandalsAA"
+    ]
+   }
+  },
+  {
+   "type": "ArmorAddon",
+   "from": "Circlet06AA",
+   "id": "SigfHeadgearAA",
+   "set": {
+    "WorldModel.Male.File": "sigf\\headgear.nif",
+    "WorldModel.Female.File": "sigf\\headgear.nif",
+    "BodyTemplate.FirstPersonFlags": "Hair|Circlet"
+   }
+  },
+  {
+   "type": "Armor",
+   "from": "ClothesCirclet06",
+   "id": "SigfLeafHeadband",
+   "set": {
+    "Name": "Leaf Village Headband and Hair",
+    "Armature": [
+     "@SigfHeadgearAA"
+    ],
+    "BodyTemplate.FirstPersonFlags": "Hair|Circlet"
+   }
+  },
+  {
+   "type": "Outfit",
+   "id": "SigfNarutoOutfit",
+   "set": {
+    "Items": [
+     "@SigfOrangeSuit",
+     "@SigfNinjaSandals",
+     "@SigfLeafHeadband"
+    ]
+   }
+  },
+  {
+   "type": "Weapon",
+   "from": "IronDagger",
+   "id": "SigfKunai",
+   "set": {
+    "Name": "Kunai",
+    "BasicStats.Damage": 14
+   }
+  },
+  {
+   "type": "Activator",
+   "from": "MG02Orb",
+   "id": "SigfRasenganOrb",
+   "set": {
+    "Model.File": "sigf\\rasengan.nif"
+   }
+  },
+  {
+   "type": "Activator",
+   "from": "MG02Orb",
+   "id": "SigfSmokePuff",
+   "set": {
+    "Model.File": "sigf\\smoke_puff.nif"
+   },
+   "scripts": [
+    {
+     "name": "SigfPuff"
+    }
+   ]
+  },
+  {
+   "type": "Npc",
+   "from": "Sven",
+   "id": "SigfNaruto",
+   "set": {
+    "Name": "Naruto",
+    "Height": 0.93,
+    "DefaultOutfit": "@SigfNarutoOutfit",
+    "Configuration.Flags": "AutoCalcStats",
+    "Packages": [],
+    "Configuration.HealthOffset": 120,
+    "Template": "@Sven",
+    "Configuration.TemplateFlags": "Traits"
+   },
+   "scripts": [
+    {
+     "name": "SigfTracked",
+     "properties": {
+      "Tag": "naruto"
+     }
+    }
+   ]
+  },
+  {
+   "type": "TextureSet",
+   "id": "SigfKuramaFurTex",
+   "set": {
+    "Diffuse": "sigf\\kurama_fur.dds",
+    "NormalOrGloss": "sigf\\kurama_fur_n.dds"
+   }
+  },
+  {
+   "type": "ArmorAddon",
+   "from": "NakedFoxAA",
+   "id": "SigfKuramaAA",
+   "set": {
+    "WorldModel.Male.AlternateTextures": [
+     {
+      "Name": "LowFox",
+      "Index": 0,
+      "NewTexture": "@SigfKuramaFurTex"
+     }
+    ]
+   }
+  },
+  {
+   "type": "Armor",
+   "from": "SkinFox",
+   "id": "SigfKuramaSkin",
+   "set": {
+    "Armature": [
+     "@SigfKuramaAA"
+    ]
+   }
+  },
+  {
+   "type": "EffectShader",
+   "from": "FireCloakFXShader",
+   "id": "SigfKuramaFlame",
+   "set": {
+    "EdgeEffectColor": "#ff7a10",
+    "FillColorKey1": "#ff3c00",
+    "ParticleFullBirthRatio": 60,
+    "ParticlePeristentCount": 40,
+    "ParticleScaleKey1": 30,
+    "ParticleScaleKey2": 70,
+    "EdgeEffectFallOff": 1.2
+   }
+  },
+  {
+   "type": "Npc",
+   "from": "EncFox",
+   "id": "SigfKurama",
+   "set": {
+    "Name": "Kurama the Nine-Tailed Fox",
+    "Height": 1.0,
+    "Configuration.HealthOffset": 1500,
+    "WornArmor": "@SigfKuramaSkin"
+   },
+   "scripts": [
+    {
+     "name": "SigfTracked",
+     "properties": {
+      "Tag": "kurama"
+     }
+    }
+   ]
+  }
+ ],
+ "sounds": {
+  "SigfPoof": "poof.wav",
+  "SigfCloneJutsu": "clone_jutsu.wav",
+  "SigfBelieveIt": "believe_it.wav",
+  "SigfRasenganCharge": "rasengan_charge.wav",
+  "SigfRasenganHit": "rasengan_hit.wav",
+  "SigfRasenganShout": "rasengan_shout.wav"
+ },
+ "quests": {
+  "SigfMod": {
+   "properties": {}
+  },
+  "SigfDemo": {
+   "properties": {
+    "ModQuest": "@SigfMod"
+   }
+  }
+ }
+}
