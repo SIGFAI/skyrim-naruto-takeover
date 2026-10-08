@@ -1,0 +1,213 @@
+{
+  "id": "sigf/skyrim-naruto-takeover",
+  "version": "1.0.0",
+  "name": "Naruto Takeover",
+  "tagline": "Bring Naruto into the game in the most visible and funny way. The change shows in the first 30 seconds of play.",
+  "kind": "mashup",
+  "games": [
+    {
+      "game": "skyrim",
+      "role": "host",
+      "engine": "Skyrim Special Edition (Creation Engine, Papyrus) + headless plugin builder (Mutagen) + PapyrusCompiler",
+      "apps": {
+        "steam": "489830"
+      }
+    },
+    {
+      "game": "naruto",
+      "role": "guest",
+      "label": "Naruto",
+      "canonical": false
+    }
+  ],
+  "requires": [],
+  "install": [
+    {
+      "game": "skyrim",
+      "strategy": "profile",
+      "files": [
+        {
+          "src": "skyrim-naruto-takeover.zip",
+          "dst": "{game}/Data",
+          "unpack": true,
+          "contents": [
+            {
+              "path": "Meshes/sigf/headgear.nif",
+              "sha256": "1a91cc0dd3213993440aa645a5a31b6b6f87e8f11a7f321085fe4aefb0ac29d0"
+            },
+            {
+              "path": "Meshes/sigf/rasengan.nif",
+              "sha256": "7ba5c99089d02ff4a7d31cda17b6541f209e7ea187959425c54526c6dd289e97"
+            },
+            {
+              "path": "Meshes/sigf/smoke_puff.nif",
+              "sha256": "d26179ddb0d98180318c0c09970be81bdf35f182ae5893f64632788c805ef686"
+            },
+            {
+              "path": "Scripts/SigfDemo.pex",
+              "sha256": "d8350a52534063d8254bf65e793bb9e95b7566f36aa25edfe2ce5d6c318df233"
+            },
+            {
+              "path": "Scripts/SigfKit.pex",
+              "sha256": "24c5eabdad113814700c582ab9aede201471d3c95d2bc306d400a81c9ee67ddb"
+            },
+            {
+              "path": "Scripts/SigfLib.pex",
+              "sha256": "312940c042ae20af2412ac7079acc12320b413949aec80c6744c6f70098dc69c"
+            },
+            {
+              "path": "Scripts/SigfMod.pex",
+              "sha256": "7f41dc72a9adb6fb92e211fe54f8758df4cc33a43269e3e5162488df230f6b6d"
+            },
+            {
+              "path": "Scripts/SigfPuff.pex",
+              "sha256": "5a7f03146dfa209a54acb1e885d804f3253792bd132fc72026028952fc649d74"
+            },
+            {
+              "path": "Scripts/SigfTracked.pex",
+              "sha256": "360390d700e691a56b62d40e95bc24b82680e6fdc095c009208795fb65501dcc"
+            },
+            {
+              "path": "Scripts/Source/SigfDemo.psc",
+              "sha256": "6a6f1df8aa2aa8e90208e57a5499a9b60637df7dea230db71085bd2b2d2326f4"
+            },
+            {
+              "path": "Scripts/Source/SigfKit.psc",
+              "sha256": "a3213c96bdb03bbf442024c48db4cb3049cefaec107e123a662a3d7950661934"
+            },
+            {
+              "path": "Scripts/Source/SigfLib.psc",
+              "sha256": "85113ba5b7bff97bd715c28d06a44bca0c657df4033db76b3141b84ce73765f6"
+            },
+            {
+              "path": "Scripts/Source/SigfMod.psc",
+              "sha256": "5e2e5158a98f36254b96ea5a7b4f3f661dda8eea144f6e75248bded5a5ce9bc0"
+            },
+            {
+              "path": "Scripts/Source/SigfPuff.psc",
+              "sha256": "b9fc87321699618e383cc46807327fbd1780c5425f304b5448d252ce0c31783c"
+            },
+            {
+              "path": "Scripts/Source/SigfTracked.psc",
+              "sha256": "7e2d5a99e164db45eb5eadc8c89b44b0e494ca335b28cae7422f7d3bfa01f305"
+            },
+            {
+              "path": "Sigf.esp",
+              "sha256": "2eb5685e01e71d9a5daefdc48e1af02571a52cfefcedcf9a1d4b33c379ae3de2"
+            },
+            {
+              "path": "Sound/fx/sigf/believe_it.wav",
+              "sha256": "43de78931124b3821c495f197c21b40fea2d74f7de50c0e97a8cfe4f9a865623"
+            },
+            {
+              "path": "Sound/fx/sigf/clone_jutsu.wav",
+              "sha256": "ccb0d434d3c468ba6a679c3ab4eaea1f954311d9e25847067168aec8d1d31c19"
+            },
+            {
+              "path": "Sound/fx/sigf/poof.wav",
+              "sha256": "e5dcd69bf3cac93abd9842e9e2f0536d544a812d8151dded0df0a2918b793fcc"
+            },
+            {
+              "path": "Sound/fx/sigf/rasengan_charge.wav",
+              "sha256": "a1ab00e8c8dc7e49c5616d0046b371ef29c61fa3e530dc4b04fd9af61df06e4f"
+            },
+            {
+              "path": "Sound/fx/sigf/rasengan_hit.wav",
+              "sha256": "ecf9bf24107ae6af2ef7f0dc3291de28d0dde9b6b42a5c2e0c85a3e5a669a112"
+            },
+            {
+              "path": "Sound/fx/sigf/rasengan_shout.wav",
+              "sha256": "12db8bc01c9786bf97e6943a2c810e7558afb199b85547c0e6738c657355c5cf"
+            },
+            {
+              "path": "Textures/sigf/headgear_n.dds",
+              "sha256": "39c23434040d4df83225d47ca97d008d89a62ecb5dc50bea0e37d74adc39cb96"
+            },
+            {
+              "path": "Textures/sigf/headgear.dds",
+              "sha256": "7d524800feb5330eb2fcdeeeda4288174cb2e44726a72119715d23c8a87bbf82"
+            },
+            {
+              "path": "Textures/sigf/kurama_fur_n.dds",
+              "sha256": "cf6a082b41e54d6d6dfe0c335123c5af292ae1c13b54b1895f161df8deb24227"
+            },
+            {
+              "path": "Textures/sigf/kurama_fur.dds",
+              "sha256": "04785028e3ec83e8ccc41a75254c56f76e12a93d37f926dfbd9c75d8237b6482"
+            },
+            {
+              "path": "Textures/sigf/navy_cloth_n.dds",
+              "sha256": "cf6a082b41e54d6d6dfe0c335123c5af292ae1c13b54b1895f161df8deb24227"
+            },
+            {
+              "path": "Textures/sigf/navy_cloth.dds",
+              "sha256": "37371ea18d47834bc8dad4afc69ee63ceab30f6e4eaf68794bf27786c7e25ab0"
+            },
+            {
+              "path": "Textures/sigf/orange_suit_n.dds",
+              "sha256": "5968e2e5d333c5306ecd783630fcee5b98b3dea412b1aa6c58c733dd819f8bd3"
+            },
+            {
+              "path": "Textures/sigf/orange_suit.dds",
+              "sha256": "d5f7e2540e97bbe2a62b65900cf18faadfb2ce6242282f0e7b6d3c3e967a3455"
+            },
+            {
+              "path": "Textures/sigf/rasengan_n.dds",
+              "sha256": "39c23434040d4df83225d47ca97d008d89a62ecb5dc50bea0e37d74adc39cb96"
+            },
+            {
+              "path": "Textures/sigf/rasengan.dds",
+              "sha256": "92ca921b378c7a88340d28c6173a10675ab0d155b9b95bffe2048d8dc9aeec06"
+            },
+            {
+              "path": "Textures/sigf/smoke_n.dds",
+              "sha256": "39c23434040d4df83225d47ca97d008d89a62ecb5dc50bea0e37d74adc39cb96"
+            },
+            {
+              "path": "Textures/sigf/smoke.dds",
+              "sha256": "8bd0717537580510990a9d5cfa02e21ab9c5667b3fb3e3d8fc58cc86d163241e"
+            }
+          ],
+          "url": "https://github.com/SIGFAI/skyrim-naruto-takeover/releases/download/v1.0.0/skyrim-naruto-takeover.zip",
+          "sha256": "61f1663c7e37c61f10f4920b1d8c798ae8af5d784db201f80c073c9d9b4b6563",
+          "size": 7040263
+        }
+      ],
+      "overlay": "Data"
+    }
+  ],
+  "launch": [
+    {
+      "game": "skyrim",
+      "args": []
+    }
+  ],
+  "files": [
+    {
+      "name": "skyrim-naruto-takeover.zip",
+      "url": "https://github.com/SIGFAI/skyrim-naruto-takeover/releases/download/v1.0.0/skyrim-naruto-takeover.zip",
+      "sha256": "61f1663c7e37c61f10f4920b1d8c798ae8af5d784db201f80c073c9d9b4b6563",
+      "size": 7040263
+    }
+  ],
+  "source": {
+    "repo": "https://github.com/SIGFAI/skyrim-naruto-takeover",
+    "license": "MIT"
+  },
+  "media": {
+    "clip": "https://sigf.ai/clips/2026-10-08-8587c28a.mp4"
+  },
+  "built_by": {
+    "agent": "SIGF",
+    "model": "claude-opus-5.5"
+  },
+  "idea_by": "team",
+  "kit": {
+    "id": "skyrim",
+    "status": "draft"
+  },
+  "built_at": "2026-10-08T07:41:26.120Z",
+  "notes": [
+    "Copy the contents of the release folder (Sigf.esp, Scripts, Textures, Meshes, Sound) into Skyrim Special Edition's Data folder and enable Sigf.esp. Start a game: the village turns into Naruto clones."
+  ]
+}
